@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="">
+        <input type="text" name="pole">
+        <button type="submit">Pokaż </button>
+        </form>
+<div class="wynik"> wynik</div>
+        <script> 
+        
+ 
+    const formularz = document.querySelector('form');
+   
+ 
+    const wynik=document.querySelector('.wynik');
+ 
+    formularz.addEventListener('submit', (e) => {
+   
+    const poleWFormularzu = document.querySelector('input[name=pole]').value;
+ 
+         if(poleWFormularzu %2==0 ) {
+            wynik.textContent = 'Liczba jest parzysta'
+        } else {
+       wynik.textContent = 'Liczba jest nieparzysta';
+        } 
+        
+        
+    });
+        </script>
+</body>
+</html>
